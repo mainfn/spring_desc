@@ -1,0 +1,7 @@
+GET {{addr}}/main?a=123&b=456
+
+###
+
+POST {{addr}}/main
+Content-Type: application/x-www-form-urlencoded
+
