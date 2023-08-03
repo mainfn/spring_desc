@@ -37,6 +37,9 @@ public class App {
                             .addMapping("/main");
                     // HttpServlet을 상속한 익명 클래스를 곧바로 만들어서 등록할 수도 있다.
                     servletContext.addServlet("NotFoundServlet", new HttpServlet() {
+
+                                // service 메소드는 GET, POST, PUT, DELETE 등 HTTP METHOD 종류와 상관 없이
+                                // 경로만 일치하면 모든 요청을 처리한다.
                                 @Override
                                 protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
                                     resp.getWriter().write("Not Found");
